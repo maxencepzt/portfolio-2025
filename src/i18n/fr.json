@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "experience": "Parcours",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Développeur Full-Stack · Passionné d'IA",
+    "bio": "Étudiant en BUT Informatique, je combine développement web et passion pour l'intelligence artificielle. Autonome et curieux, je crée des projets qui repoussent mes limites techniques.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact": "Me contacter"
+  },
+  "about": {
+    "title": "À propos",
+    "who_title": "Qui suis-je",
+    "who_subtitle": "Développeur & Créateur",
+    "bio_p1": "Actuellement en troisième année de BUT Informatique à l'IUT de Reims, j'ai acquis un bagage technique solide en développement web. Mais au-delà des cours, je suis un passionné qui a besoin de",
+    "bio_do": "\"faire\"",
+    "bio_p1_end": ". En autodidacte, je déploie mes propres serveurs, j'explore les modèles d'IA locaux avec Ollama et je m'intéresse de près aux marchés financiers.",
+    "bio_p2_start": "Je cherche actuellement une",
+    "bio_p2_strong": "alternance en développement logiciel et IA",
+    "bio_p2_end": "pour intégrer une école d'ingénieurs et passer du statut de technicien à celui d'ingénieur.",
+    "based_in": "Basé en",
+    "location": "Île-de-France",
+    "location_detail": "Région Parisienne (91) · Permis B",
+    "skills_devops": "DevOps & Outils",
+    "interests_title": "Centres d'intérêt",
+    "passions": [
+      {
+        "emoji": "🤖",
+        "label": "Intelligence Artificielle",
+        "desc": "Veille sur l'IA générative, modèles locaux avec Ollama"
+      },
+      {
+        "emoji": "🎵",
+        "label": "Musique",
+        "desc": "Bénévole Solectro (Festy'Chant), composition synthétiseur"
+      },
+      {
+        "emoji": "🎬",
+        "label": "Vidéo",
+        "desc": "Création vidéos cinématographiques, passionné de films"
+      },
+      {
+        "emoji": "📈",
+        "label": "Finance",
+        "desc": "Cryptomonnaies et finance traditionnelle"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "visit_site": "Voir le site",
+    "items": [
+      {
+        "title": "Treasurely",
+        "description": "Application web Progressive (PWA) pour créer et participer à des chasses au trésor. Interface complète avec gestion d'état Redux, service worker offline et cache intelligent."
+      },
+      {
+        "title": "Rusk Records",
+        "description": "Site vitrine pour un label de musique indépendant. Présentation des artistes, services et sons du label."
+      },
+      {
+        "title": "Portfolio",
+        "description": "Ce portfolio interactif avec système de particules, bento layout et animations fluides."
+      },
+      {
+        "title": "SAÉ Labyrinthe",
+        "description": "Projet universitaire : résolution algorithmique de labyrinthes avec visualisation interactive."
+      },
+      {
+        "title": "SAÉ Puissance 4",
+        "description": "Implémentation du jeu Puissance 4 avec intelligence artificielle, projet de première année."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Parcours",
+    "pro_title": "Expériences professionnelles",
+    "edu_title": "Formation",
+    "autodidact_title": "Autodidacte",
+    "autodidact_desc": "Serveurs auto-hébergés, modèles IA locaux, rigs de minage crypto, NAS, bots d'automatisation...",
+    "jobs": [
+      {
+        "period": "Jan. 2026 — Avr. 2026",
+        "duration": "4 mois",
+        "title": "Développeur Back-end",
+        "company": "Monstock",
+        "type": "Stage",
+        "description": [
+          "Développement et maintenance d'API REST en Symfony",
+          "Identification et résolution de bugs sur une codebase complexe",
+          "Collaboration quotidienne : revues de code, tickets, priorisation"
+        ],
+        "techs": ["Symfony", "PHP", "API REST"]
+      },
+      {
+        "period": "Avr. 2025 — Juin 2025",
+        "duration": "3 mois",
+        "title": "Développeur Web",
+        "company": "DSI Univ. Paris-Saclay",
+        "type": "Stage",
+        "description": [
+          "Développement front-end de l'annuaire universitaire en React",
+          "Wireframing, prototypage et design UI/UX",
+          "Respect des normes d'accessibilité et d'internationalisation"
+        ],
+        "techs": ["React", "UI/UX", "Accessibilité"]
+      }
+    ],
+    "education": [
+      {
+        "period": "2023 — 2026",
+        "title": "BUT Informatique",
+        "school": "IUT de Reims",
+        "desc": "Formation complète en développement, bases de données, réseau et gestion de projet."
+      },
+      {
+        "period": "2023",
+        "title": "Baccalauréat —  Général",
+        "school": "Mention Bien",
+        "desc": "Spécialités : Mathématiques, Informatique. Option : Mathématiques Expertes"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "cta_title": "Travaillons ensemble",
+    "cta_desc_start": "Je suis à la recherche d'une",
+    "cta_desc_strong": "alternance en développement logiciel et IA",
+    "cta_desc_end": "pour la période 2026-2029. Ouvert à toute opportunité de collaboration ou de projet innovant.",
+    "send_email": "M'envoyer un email",
+    "website": "Site web",
+    "hint": "Astuce : Appuie sur",
+    "hint_end": "pour jouer avec la gravité des particules"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "made_with": "Créé avec React, TypeScript & ❤️"
+  },
+  "gravity": {
+    "normal": "normale",
+    "reversed": "inversée",
+    "label_prefix": "Gravité"
+  }
+}

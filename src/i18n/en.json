@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Journey",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Full-Stack Developer · AI Enthusiast",
+    "bio": "Computer Science student, I combine web development and a passion for artificial intelligence. Self-driven and curious, I build projects that push my technical limits.",
+    "cta_projects": "View my projects",
+    "cta_contact": "Get in touch"
+  },
+  "about": {
+    "title": "About",
+    "who_title": "Who am I",
+    "who_subtitle": "Developer & Creator",
+    "bio_p1": "Currently in my third year of a Computer Science degree at IUT de Reims, I have built a strong technical foundation in web development. But beyond coursework, I am a passionate maker who needs to",
+    "bio_do": "\"build\"",
+    "bio_p1_end": ". Self-taught, I deploy my own servers, explore local AI models with Ollama, and closely follow financial markets.",
+    "bio_p2_start": "I am currently looking for a",
+    "bio_p2_strong": "work-study position in software development and AI",
+    "bio_p2_end": "to join an engineering school and transition from technician to engineer.",
+    "based_in": "Based in",
+    "location": "Île-de-France",
+    "location_detail": "Paris Area (91) · Driving License",
+    "skills_devops": "DevOps & Tools",
+    "interests_title": "Interests",
+    "passions": [
+      {
+        "emoji": "🤖",
+        "label": "Artificial Intelligence",
+        "desc": "Keeping up with generative AI, local models with Ollama"
+      },
+      {
+        "emoji": "🎵",
+        "label": "Music",
+        "desc": "Solectro volunteer (Festy'Chant), synth composition"
+      },
+      {
+        "emoji": "🎬",
+        "label": "Video",
+        "desc": "Cinematic video creation, movie enthusiast"
+      },
+      {
+        "emoji": "📈",
+        "label": "Finance",
+        "desc": "Cryptocurrencies and traditional finance"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "visit_site": "Visit site",
+    "items": [
+      {
+        "title": "Treasurely",
+        "description": "Progressive Web App (PWA) to create and join treasure hunts. Full interface with Redux state management, offline service worker and smart cache."
+      },
+      {
+        "title": "Rusk Records",
+        "description": "Showcase website for an independent music label. Featuring artists, services and sounds."
+      },
+      {
+        "title": "Portfolio",
+        "description": "This interactive portfolio featuring a particle system, bento layout and smooth animations."
+      },
+      {
+        "title": "SAÉ Maze Solver",
+        "description": "University project: algorithmic maze solving with interactive visualization."
+      },
+      {
+        "title": "SAÉ Connect Four",
+        "description": "Connect Four game with artificial intelligence, first-year university project."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Journey",
+    "pro_title": "Work Experience",
+    "edu_title": "Education",
+    "autodidact_title": "Self-taught",
+    "autodidact_desc": "Self-hosted servers, local AI models, crypto mining rigs, NAS, automation bots...",
+    "jobs": [
+      {
+        "period": "Jan. 2026 — Apr. 2026",
+        "duration": "4 months",
+        "title": "Back-end Developer",
+        "company": "Monstock",
+        "type": "Internship",
+        "description": [
+          "Development and maintenance of REST APIs with Symfony",
+          "Bug identification and resolution on a complex codebase",
+          "Daily collaboration: code reviews, tickets, prioritization"
+        ],
+        "techs": ["Symfony", "PHP", "REST API"]
+      },
+      {
+        "period": "Apr. 2025 — Jun. 2025",
+        "duration": "3 months",
+        "title": "Web Developer",
+        "company": "DSI Univ. Paris-Saclay",
+        "type": "Internship",
+        "description": [
+          "Front-end development of the university directory in React",
+          "Wireframing, prototyping and UI/UX design",
+          "Compliance with accessibility and internationalization standards"
+        ],
+        "techs": ["React", "UI/UX", "Accessibility"]
+      }
+    ],
+    "education": [
+      {
+        "period": "2023 — 2026",
+        "title": "BUT Informatique",
+        "school": "IUT de Reims",
+        "desc": "Comprehensive training in development, databases, networking and project management."
+      },
+      {
+        "period": "2023",
+        "title": "Baccalauréat — General",
+        "school": "With Honours",
+        "desc": "Majors: Maths, IT, Expert Maths"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "cta_title": "Let's work together",
+    "cta_desc_start": "I am looking for a",
+    "cta_desc_strong": "work-study position in software development and AI",
+    "cta_desc_end": "for the 2026-2029 period. Open to any collaboration or innovative project opportunity.",
+    "send_email": "Send me an email",
+    "website": "Website",
+    "hint": "Tip: Press",
+    "hint_end": "to play with particle gravity"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "made_with": "Built with React, TypeScript & ❤️"
+  },
+  "gravity": {
+    "normal": "normal",
+    "reversed": "reversed",
+    "label_prefix": "Gravity"
+  }
+}
