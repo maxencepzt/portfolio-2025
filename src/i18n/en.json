@@ -81,7 +81,38 @@
     "pro_title": "Work Experience",
     "edu_title": "Education",
     "autodidact_title": "Self-taught",
-    "autodidact_desc": "Self-hosted servers, local AI models, crypto mining rigs, NAS, automation bots...",
+    "autodidact_desc": "All these experiences were completely self-taught.",
+    "autodidact_projects": [
+      {
+        "title": "OpenClaw",
+        "desc": "Server deployment to run OpenClaw, a self-hosted open-source AI assistant."
+      },
+      {
+        "title": "Mining rigs",
+        "desc": "Creation of several mining rigs. Mining farm management. Market analysis."
+      },
+      {
+        "title": "Server management",
+        "desc": "Development of a management panel (Pterodactyl) on my VPS."
+      },
+      {
+        "title": "Game server creation",
+        "desc": "Installation and configuration of servers for Minecraft, Garry's Mod, BeamMP, etc."
+      },
+      {
+        "title": "NAS Build",
+        "desc": "Setup of a storage system using TrueNAS."
+      },
+      {
+        "title": "Raspberry Pi projects",
+        "desc": "Development of various projects, including an UberEats promotion analysis bot."
+      },
+      {
+        "title": "Monitoring interface",
+        "desc": "Creation of a performance tracking interface with Grafana."
+      }
+    ],
+    "autodidact_joke": "And many (many) projects abandoned along the way... 😅",
     "jobs": [
       {
         "period": "Jan. 2026 — Apr. 2026",

@@ -105,12 +105,31 @@ const ExperienceSection = () => {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card className="p-6 bg-neutral-900 border-neutral-800 text-white">
+              <Card className="p-6 bg-neutral-900 border-neutral-800 text-white flex flex-col h-full">
                 <div className="text-2xl mb-3">🚀</div>
                 <h4 className="text-base font-semibold mb-2">{t.experience.autodidact_title}</h4>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <p className="text-neutral-400 text-sm leading-relaxed mb-4">
                   {t.experience.autodidact_desc}
                 </p>
+                <div className="flex-1 space-y-4">
+                  {t.experience.autodidact_projects?.map((project, index) => (
+                    <div key={index} className="flex flex-col gap-1">
+                      <span className="text-sm font-medium text-neutral-200">
+                        {project.title}
+                      </span>
+                      <span className="text-xs text-neutral-400">
+                        {project.desc}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                {t.experience.autodidact_joke && (
+                  <div className="mt-6 pt-4 border-t border-neutral-800">
+                    <p className="text-xs text-neutral-500 italic">
+                      {t.experience.autodidact_joke}
+                    </p>
+                  </div>
+                )}
               </Card>
             </motion.div>
           </div>

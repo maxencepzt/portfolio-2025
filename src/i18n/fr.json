@@ -81,7 +81,38 @@
     "pro_title": "Expériences professionnelles",
     "edu_title": "Formation",
     "autodidact_title": "Autodidacte",
-    "autodidact_desc": "Serveurs auto-hébergés, modèles IA locaux, rigs de minage crypto, NAS, bots d'automatisation...",
+    "autodidact_desc": "Toutes ces expériences ont été réalisées en autodidactes.",
+    "autodidact_projects": [
+      {
+        "title": "OpenClaw",
+        "desc": "Déploiement d’un serveur pour exécuter OpenClaw, un assistant IA open-source self-hosted."
+      },
+      {
+        "title": "Rig de minage",
+        "desc": "Création de plusieurs rigs de minage. Gestion d'un parc de minage. Analyse des marchés."
+      },
+      {
+        "title": "Gestion de serveurs",
+        "desc": "Développement d'un panel de gestion (Pterodactyl) sur mon VPS."
+      },
+      {
+        "title": "Création de serveurs de jeux",
+        "desc": "Installation et configuration de serveurs pour Minecraft, Garry's Mod, BeamMP, etc."
+      },
+      {
+        "title": "Réalisation d'un NAS",
+        "desc": "Mise en place d'un système de stockage avec TrueNAS."
+      },
+      {
+        "title": "Projets Raspberry Pi",
+        "desc": "Développement de divers projets, dont un bot d'analyse de promotion UberEats."
+      },
+      {
+        "title": "Interface de monitoring",
+        "desc": "Création d'une interface de suivi de performances avec Grafana."
+      }
+    ],
+    "autodidact_joke": "Et beaucoup (beaucoup) de projets abandonnés en cours de route... 😅",
     "jobs": [
       {
         "period": "Jan. 2026 — Avr. 2026",
