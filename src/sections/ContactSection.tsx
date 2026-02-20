@@ -8,8 +8,18 @@ const ContactSection = () => {
   const contacts = [
     {
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
         </svg>
       ),
       label: 'Email',
@@ -38,8 +48,18 @@ const ContactSection = () => {
     },
     {
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+          />
         </svg>
       ),
       label: t.contact.website,
@@ -67,7 +87,6 @@ const ContactSection = () => {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
           {/* Message Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +104,9 @@ const ContactSection = () => {
                 </h3>
                 <p className="text-neutral-500 leading-relaxed">
                   {t.contact.cta_desc_start}{' '}
-                  <strong className="text-neutral-700">{t.contact.cta_desc_strong}</strong>{' '}
+                  <strong className="text-neutral-700">
+                    {t.contact.cta_desc_strong}
+                  </strong>{' '}
                   {t.contact.cta_desc_end}
                 </p>
               </div>
@@ -94,8 +115,18 @@ const ContactSection = () => {
                   href="mailto:maxence.poizat@gmail.com"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-all text-sm shadow-sm"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   {t.contact.send_email}
                 </a>
@@ -122,11 +153,25 @@ const ContactSection = () => {
                     {contact.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs text-neutral-400 font-medium uppercase tracking-wider">{contact.label}</p>
-                    <p className="text-neutral-800 font-medium text-sm truncate">{contact.value}</p>
+                    <p className="text-xs text-neutral-400 font-medium uppercase tracking-wider">
+                      {contact.label}
+                    </p>
+                    <p className="text-neutral-800 font-medium text-sm truncate">
+                      {contact.value}
+                    </p>
                   </div>
-                  <svg className="w-4 h-4 text-neutral-300 group-hover:text-neutral-500 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-4 h-4 text-neutral-300 group-hover:text-neutral-500 transition-colors flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </Card>
               </motion.a>
@@ -144,7 +189,9 @@ const ContactSection = () => {
         >
           <p className="text-neutral-300 text-sm">
             💡 {t.contact.hint}{' '}
-            <kbd className="px-2 py-1 bg-neutral-100 rounded text-neutral-500 text-xs font-mono">G</kbd>{' '}
+            <kbd className="px-2 py-1 bg-neutral-100 rounded text-neutral-500 text-xs font-mono">
+              G
+            </kbd>{' '}
             {t.contact.hint_end}
           </p>
         </motion.div>

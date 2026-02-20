@@ -32,21 +32,24 @@ const ParticleCanvas = ({ gravityMode }: ParticleCanvasProps) => {
     };
   }, []);
 
-  const initParticles = useCallback((canvas: HTMLCanvasElement) => {
-    const particles: Particle[] = [];
-    const particleCount = Math.floor((canvas.width * canvas.height) / 18000);
+  const initParticles = useCallback(
+    (canvas: HTMLCanvasElement) => {
+      const particles: Particle[] = [];
+      const particleCount = Math.floor((canvas.width * canvas.height) / 18000);
 
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(
-        createParticle(
-          Math.random() * canvas.width,
-          Math.random() * canvas.height
-        )
-      );
-    }
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(
+          createParticle(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height
+          )
+        );
+      }
 
-    particlesRef.current = particles;
-  }, [createParticle]);
+      particlesRef.current = particles;
+    },
+    [createParticle]
+  );
 
   const updateParticles = useCallback(
     (canvas: HTMLCanvasElement) => {
@@ -179,10 +182,7 @@ const ParticleCanvas = ({ gravityMode }: ParticleCanvasProps) => {
   }, [animate, initParticles]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-auto"
-    />
+    <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-auto" />
   );
 };
 

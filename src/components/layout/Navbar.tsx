@@ -17,20 +17,17 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
+    const sectionIds = ['hero', 'about', 'projects', 'experience', 'contact'];
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = navItems.map((item) => ({
-        id: item.id,
-        el: document.getElementById(item.id),
-      }));
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section.el) {
-          const rect = section.el.getBoundingClientRect();
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
           if (rect.top <= 150) {
-            setActiveSection(section.id);
+            setActiveSection(sectionIds[i]);
             break;
           }
         }
@@ -39,7 +36,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [t]);
+  }, []);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -54,9 +51,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 px-4 py-3 transition-all duration-300 ${
-        scrolled ? 'py-2' : 'py-3'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 px-4 py-3 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}
     >
       <div className="max-w-6xl mx-auto">
         <div

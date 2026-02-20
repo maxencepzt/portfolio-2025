@@ -32,19 +32,20 @@ const Layout = ({ children }: LayoutProps) => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="relative z-10">
-        {children}
-      </main>
+      <main className="relative z-10">{children}</main>
 
       {/* Gravity Toggle Button */}
-      <GravityToggle active={gravityMode} onToggle={() => setGravityMode((prev) => !prev)} />
+      <GravityToggle
+        active={gravityMode}
+        onToggle={() => setGravityMode((prev) => !prev)}
+      />
 
       {/* Footer */}
       <footer className="relative z-10 py-8 text-center text-neutral-400 text-sm border-t border-neutral-100">
-        <p>© {new Date().getFullYear()} Maxence Poizat. {t.footer.rights}</p>
-        <p className="mt-2 text-xs text-neutral-300">
-          {t.footer.made_with}
+        <p>
+          © {new Date().getFullYear()} Maxence Poizat. {t.footer.rights}
         </p>
+        <p className="mt-2 text-xs text-neutral-300">{t.footer.made_with}</p>
       </footer>
     </div>
   );

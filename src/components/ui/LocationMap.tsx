@@ -8,7 +8,11 @@ interface LocationMapProps {
   zoom?: number;
 }
 
-const LocationMap = ({ lat = 48.6, lng = 2.25, zoom = 10 }: LocationMapProps) => {
+const LocationMap = ({
+  lat = 48.6,
+  lng = 2.25,
+  zoom = 10,
+}: LocationMapProps) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
 
@@ -30,7 +34,9 @@ const LocationMap = ({ lat = 48.6, lng = 2.25, zoom = 10 }: LocationMapProps) =>
     // CartoDB Voyager — clean, colorful, Apple-like style
     L.tileLayer(
       'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-      { maxZoom: 19 }
+      {
+        maxZoom: 19,
+      }
     ).addTo(map);
 
     // Pulsing blue dot marker (Apple-style)

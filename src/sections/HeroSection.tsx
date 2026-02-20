@@ -5,7 +5,10 @@ const HeroSection = () => {
   const { t } = useI18n();
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4"
+    >
       <div className="max-w-4xl mx-auto text-center">
         {/* Avatar */}
         <motion.div
@@ -55,13 +58,21 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <button
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById('projects')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
             className="px-8 py-3.5 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-all shadow-sm text-sm cursor-pointer"
           >
             {t.hero.cta_projects}
           </button>
           <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById('contact')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
             className="px-8 py-3.5 bg-surface text-neutral-700 rounded-xl font-medium border border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all text-sm cursor-pointer"
           >
             {t.hero.cta_contact}

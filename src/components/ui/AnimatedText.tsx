@@ -6,7 +6,11 @@ interface AnimatedTextProps {
   delay?: number;
 }
 
-const AnimatedText = ({ text, className = '', delay = 0 }: AnimatedTextProps) => {
+const AnimatedText = ({
+  text,
+  className = '',
+  delay = 0,
+}: AnimatedTextProps) => {
   const words = text.split(' ');
 
   const container: Variants = {
@@ -46,11 +50,7 @@ const AnimatedText = ({ text, className = '', delay = 0 }: AnimatedTextProps) =>
       className={className}
     >
       {words.map((word, index) => (
-        <motion.span
-          variants={child}
-          key={index}
-          className="inline-block mr-2"
-        >
+        <motion.span variants={child} key={index} className="inline-block mr-2">
           {word}
         </motion.span>
       ))}

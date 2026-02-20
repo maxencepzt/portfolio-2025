@@ -6,7 +6,14 @@ import LocationMap from '../components/ui/LocationMap';
 const skills = [
   {
     category: 'Frontend',
-    items: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML/CSS', 'Flutter'],
+    items: [
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'Tailwind CSS',
+      'HTML/CSS',
+      'Flutter',
+    ],
     icon: '◆',
   },
   {
@@ -46,7 +53,6 @@ const AboutSection = () => {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
           {/* Bio Card - Large */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,18 +67,24 @@ const AboutSection = () => {
                   👋
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-neutral-900">{t.about.who_title}</h3>
-                  <p className="text-neutral-400 text-sm">{t.about.who_subtitle}</p>
+                  <h3 className="text-lg font-semibold text-neutral-900">
+                    {t.about.who_title}
+                  </h3>
+                  <p className="text-neutral-400 text-sm">
+                    {t.about.who_subtitle}
+                  </p>
                 </div>
               </div>
               <p className="text-neutral-600 leading-relaxed">
-                {t.about.bio_p1}
-                {' '}<strong className="text-neutral-800">{t.about.bio_do}</strong>
+                {t.about.bio_p1}{' '}
+                <strong className="text-neutral-800">{t.about.bio_do}</strong>
                 {t.about.bio_p1_end}
               </p>
               <p className="text-neutral-600 leading-relaxed mt-4">
                 {t.about.bio_p2_start}{' '}
-                <strong className="text-neutral-800">{t.about.bio_p2_strong}</strong>{' '}
+                <strong className="text-neutral-800">
+                  {t.about.bio_p2_strong}
+                </strong>{' '}
                 {t.about.bio_p2_end}
               </p>
             </Card>
@@ -98,8 +110,12 @@ const AboutSection = () => {
                     📍
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-neutral-900">{t.about.based_in} {t.about.location}</h3>
-                    <p className="text-neutral-500 text-xs">{t.about.location_detail}</p>
+                    <h3 className="text-sm font-semibold text-neutral-900">
+                      {t.about.based_in} {t.about.location}
+                    </h3>
+                    <p className="text-neutral-500 text-xs">
+                      {t.about.location_detail}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -118,7 +134,9 @@ const AboutSection = () => {
               <Card className="p-6 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-neutral-300 text-xl">{skill.icon}</span>
-                  <h3 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider">{skill.category}</h3>
+                  <h3 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider">
+                    {skill.category}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item) => (
@@ -153,8 +171,12 @@ const AboutSection = () => {
                     className="p-4 rounded-xl bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200 transition-all"
                   >
                     <span className="text-2xl mb-3 block">{passion.emoji}</span>
-                    <h4 className="font-medium text-neutral-800 text-sm mb-1">{passion.label}</h4>
-                    <p className="text-neutral-400 text-xs leading-relaxed">{passion.desc}</p>
+                    <h4 className="font-medium text-neutral-800 text-sm mb-1">
+                      {passion.label}
+                    </h4>
+                    <p className="text-neutral-400 text-xs leading-relaxed">
+                      {passion.desc}
+                    </p>
                   </div>
                 ))}
               </div>
