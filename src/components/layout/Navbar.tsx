@@ -40,10 +40,16 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
+    if (!el) return;
+
+    const navbarHeight = 80;
+    const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+    setIsOpen(false);
+
+    setTimeout(() => {
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 150);
   };
 
   return (
@@ -56,9 +62,11 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto">
         <div
           className={`rounded-2xl px-6 py-3 transition-all duration-300 ${
-            scrolled
-              ? 'bg-surface/80 backdrop-blur-xl border border-neutral-200/80 shadow-sm'
-              : 'bg-transparent'
+            isOpen
+              ? 'backdrop-blur-xl border border-neutral-200/80 shadow-sm'
+              : scrolled
+                ? 'backdrop-blur-xl border border-neutral-200/80 shadow-sm'
+                : 'bg-transparent'
           }`}
         >
           <div className="flex items-center justify-between">
@@ -97,20 +105,36 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center"
             >
-              <div className="space-y-1.5">
-                <motion.span
-                  animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 }}
-                  className="block w-5 h-0.5 bg-neutral-700"
-                />
-                <motion.span
-                  animate={{ opacity: isOpen ? 0 : 1 }}
-                  className="block w-5 h-0.5 bg-neutral-700"
-                />
-                <motion.span
-                  animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -6 : 0 }}
-                  className="block w-5 h-0.5 bg-neutral-700"
-                />
-              </div>
+              {isOpen ? (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  className="text-neutral-700"
+                >
+                  <line x1="4" y1="4" x2="16" y2="16" />
+                  <line x1="16" y1="4" x2="4" y2="16" />
+                </svg>
+              ) : (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  className="text-neutral-700"
+                >
+                  <line x1="3" y1="5" x2="17" y2="5" />
+                  <line x1="3" y1="10" x2="17" y2="10" />
+                  <line x1="3" y1="15" x2="17" y2="15" />
+                </svg>
+              )}
             </button>
           </div>
 
