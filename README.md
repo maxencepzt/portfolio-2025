@@ -1,69 +1,110 @@
-# React + TypeScript + Vite
+# 🚀 Maxence Poizat — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel de développeur full-stack, conçu avec React, TypeScript et Tailwind CSS.
 
-Currently, two official plugins are available:
+> **[maxencepzt.fr](https://maxencepzt.fr)** — Design minimaliste, animations fluides, i18n FR/EN.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚡ **Vite** — Build ultra-rapide avec HMR
+- 🎨 **Tailwind CSS v4** — Design system tokens personnalisés
+- 🌐 **i18n** — Détection automatique FR/EN
+- 🎭 **Framer Motion** — Animations et transitions fluides
+- 🗺️ **Leaflet** — Carte interactive de localisation
+- ✨ **Particle Canvas** — Fond interactif avec gravité
+- 📱 **Responsive** — Mobile-first, navigation adaptative
+- 🐳 **Docker** — Build multi-stage avec Nginx
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+| Catégorie      | Technologies                          |
+| -------------- | ------------------------------------- |
+| **Frontend**   | React 19, TypeScript, Tailwind CSS v4 |
+| **Animations** | Framer Motion                         |
+| **Routing**    | React Router DOM v7                   |
+| **Maps**       | Leaflet + React Leaflet               |
+| **Build**      | Vite 6                                |
+| **Linting**    | ESLint, Prettier, Husky + lint-staged |
+| **Deploy**     | Docker (Nginx Alpine)                 |
+
+---
+
+## 📦 Getting Started
+
+```bash
+# Cloner le projet
+git clone https://github.com/maxencepzt/portfolio-2025.git
+cd portfolio-2025
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Le site est disponible sur `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 📜 Scripts
+
+| Commande               | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| `npm run dev`          | Serveur de développement Vite               |
+| `npm run build`        | Build de production (TypeScript + Vite)     |
+| `npm run preview`      | Prévisualiser le build de production        |
+| `npm run lint`         | Vérifier le code avec ESLint                |
+| `npm run lint:fix`     | Corriger automatiquement les erreurs ESLint |
+| `npm run format`       | Formater le code avec Prettier              |
+| `npm run format:check` | Vérifier le formatage sans modifier         |
+| `npm run type-check`   | Vérifier les types TypeScript               |
+
+> Les hooks **Husky** exécutent automatiquement le lint, le formatage et le type-check avant chaque commit.
+
+---
+
+## 🐳 Docker
+
+```bash
+# Build de l'image
+docker build -t portfolio-2025 .
+
+# Lancer le conteneur
+docker run -d -p 8080:8080 --name portfolio-2025 portfolio-2025
 ```
+
+Le site est servi par Nginx sur `http://localhost:8080`.
+
+---
+
+## 📁 Structure
+
+```
+src/
+├── components/
+│   ├── interactive/     # ParticleCanvas, GravityToggle
+│   ├── layout/          # Navbar, Layout
+│   └── ui/              # Card, Button, AnimatedText, LocationMap
+├── i18n/                # Traductions FR/EN, Provider, Hook
+├── sections/            # Hero, About, Projects, Experience, Contact
+├── App.tsx
+├── main.tsx
+└── index.css            # Design tokens & global styles
+```
+
+---
+
+## 📄 License
+
+Ce projet est open-source.
+
+---
+
+<p align="center">
+  <sub>Built with ☕ by <a href="https://github.com/maxencepzt">Maxence Poizat</a></sub>
+</p>
