@@ -97,43 +97,63 @@ const ExperienceSection = () => {
                 </Card>
               </motion.div>
             ))}
-
-            {/* Autodidacte Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Card className="p-6 bg-neutral-900 border-neutral-800 text-white flex flex-col h-full">
-                <div className="text-2xl mb-3">🚀</div>
-                <h4 className="text-base font-semibold mb-2">{t.experience.autodidact_title}</h4>
-                <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                  {t.experience.autodidact_desc}
-                </p>
-                <div className="flex-1 space-y-4">
-                  {t.experience.autodidact_projects?.map((project, index) => (
-                    <div key={index} className="flex flex-col gap-1">
-                      <span className="text-sm font-medium text-neutral-200">
-                        {project.title}
-                      </span>
-                      <span className="text-xs text-neutral-400">
-                        {project.desc}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                {t.experience.autodidact_joke && (
-                  <div className="mt-6 pt-4 border-t border-neutral-800">
-                    <p className="text-xs text-neutral-500 italic">
-                      {t.experience.autodidact_joke}
-                    </p>
-                  </div>
-                )}
-              </Card>
-            </motion.div>
           </div>
         </div>
+
+        {/* Personal Projects — Autodidact */}
+        {t.experience.autodidact_projects && t.experience.autodidact_projects.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.6 }}
+            className="mt-16"
+          >
+            <div className="flex items-center gap-3 mb-6 px-1">
+              <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">
+                {t.experience.autodidact_title}
+              </h3>
+              <span className="text-neutral-300 text-xs">—</span>
+              <p className="text-neutral-400 text-xs">
+                {t.experience.autodidact_desc}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {t.experience.autodidact_projects.map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-30px' }}
+                  transition={{ duration: 0.4, delay: index * 0.07 }}
+                >
+                  <Card className="p-5 h-full flex flex-col">
+                    <h4 className="text-sm font-semibold text-neutral-900 mb-1.5">
+                      {project.title}
+                    </h4>
+                    <p className="text-neutral-400 text-xs leading-relaxed flex-1">
+                      {project.desc}
+                    </p>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Joke */}
+            {t.experience.autodidact_joke && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-neutral-400 text-xs italic mt-6 text-center"
+              >
+                {t.experience.autodidact_joke}
+              </motion.p>
+            )}
+          </motion.div>
+        )}
       </div>
     </section>
   );
