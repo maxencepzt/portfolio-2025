@@ -1,0 +1,10 @@
+node_modules
+dist
+.vscode
+.git
+.github
+.env
+.eslintrc.cjs
+README.md
+Dockerfile
+docker-compose.yml
