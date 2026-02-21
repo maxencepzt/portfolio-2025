@@ -20,7 +20,7 @@
     "bio_do": "\"faire\"",
     "bio_p1_end": ". En autodidacte, je déploie mes propres serveurs, j'explore les modèles d'IA locaux avec Ollama et je m'intéresse de près aux marchés financiers.",
     "bio_p2_start": "Je cherche actuellement une",
-    "bio_p2_strong": "alternance en développement logiciel et IA",
+    "bio_p2_strong": "alternance en développement logiciel et IA en région parisienne",
     "bio_p2_end": "pour intégrer une école d'ingénieurs et passer du statut de technicien à celui d'ingénieur.",
     "based_in": "Basé en",
     "location": "Île-de-France",
@@ -112,7 +112,7 @@
         "desc": "Création d'une interface de suivi de performances avec Grafana."
       }
     ],
-    "autodidact_joke": "Et beaucoup (beaucoup) de projets abandonnés en cours de route... 😅",
+    "autodidact_joke": "Et quelques projets abandonnés en cours de route... 😅",
     "jobs": [
       {
         "period": "Jan. 2026 — Avr. 2026",
@@ -160,7 +160,7 @@
     "title": "Contact",
     "cta_title": "Travaillons ensemble",
     "cta_desc_start": "Je suis à la recherche d'une",
-    "cta_desc_strong": "alternance en développement logiciel et IA",
+    "cta_desc_strong": "alternance en développement logiciel et IA en région parisienne",
     "cta_desc_end": "pour la période 2026-2029. Ouvert à toute opportunité de collaboration ou de projet innovant.",
     "send_email": "M'envoyer un email",
     "website": "Site web",

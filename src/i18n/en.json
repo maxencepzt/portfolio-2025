@@ -20,7 +20,7 @@
     "bio_do": "\"build\"",
     "bio_p1_end": ". Self-taught, I deploy my own servers, explore local AI models with Ollama, and closely follow financial markets.",
     "bio_p2_start": "I am currently looking for a",
-    "bio_p2_strong": "work-study position in software development and AI",
+    "bio_p2_strong": "work-study position in software development and AI in the Paris region",
     "bio_p2_end": "to join an engineering school and transition from technician to engineer.",
     "based_in": "Based in",
     "location": "Île-de-France",
@@ -112,7 +112,7 @@
         "desc": "Creation of a performance tracking interface with Grafana."
       }
     ],
-    "autodidact_joke": "And many (many) projects abandoned along the way... 😅",
+    "autodidact_joke": "And some projects abandoned along the way... 😅",
     "jobs": [
       {
         "period": "Jan. 2026 — Apr. 2026",
@@ -160,7 +160,7 @@
     "title": "Contact",
     "cta_title": "Let's work together",
     "cta_desc_start": "I am looking for a",
-    "cta_desc_strong": "work-study position in software development and AI",
+    "cta_desc_strong": "work-study position in software development and AI in the Paris region",
     "cta_desc_end": "for the 2026-2029 period. Open to any collaboration or innovative project opportunity.",
     "send_email": "Send me an email",
     "website": "Website",
