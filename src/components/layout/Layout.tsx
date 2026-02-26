@@ -3,6 +3,7 @@ import ParticleCanvas from '../interactive/ParticleCanvas';
 import GravityToggle from '../interactive/GravityToggle';
 import { useState, useEffect, ReactNode } from 'react';
 import { useI18n } from '../../i18n';
+import posthog from 'posthog-js';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,13 +16,23 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'g' || e.key === 'G') {
-        setGravityMode((prev) => !prev);
+        setGravityMode((prev) => {
+          posthog.capture('gravity_toggled', { state: !prev, method: 'keyboard' });
+          return !prev;
+        });
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  const handleGravityToggleClick = () => {
+    setGravityMode((prev) => {
+      posthog.capture('gravity_toggled', { state: !prev, method: 'click' });
+      return !prev;
+    });
+  };
 
   return (
     <div className="relative min-h-screen bg-page text-neutral-800 overflow-x-hidden">
@@ -37,7 +48,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Gravity Toggle Button */}
       <GravityToggle
         active={gravityMode}
-        onToggle={() => setGravityMode((prev) => !prev)}
+        onToggle={handleGravityToggleClick}
       />
 
       {/* Footer */}

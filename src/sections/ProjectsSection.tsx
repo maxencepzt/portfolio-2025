@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Card from '../components/ui/Card';
 import { useI18n } from '../i18n';
+import posthog from 'posthog-js';
 
 const projectsMeta = [
   {
@@ -93,6 +94,7 @@ const ProjectsSection = () => {
                     {project.github && (
                       <a
                         href={project.github}
+                        onClick={() => posthog.capture('project_link_clicked', { project: project.title, type: 'github' })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center text-neutral-400 hover:text-neutral-800 hover:border-neutral-200 transition-all"
@@ -110,6 +112,7 @@ const ProjectsSection = () => {
                     {project.link && (
                       <a
                         href={project.link}
+                        onClick={() => posthog.capture('project_link_clicked', { project: project.title, type: 'website' })}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center text-neutral-400 hover:text-neutral-800 hover:border-neutral-200 transition-all"
