@@ -1,9 +1,9 @@
 import Layout from './components/layout/Layout';
-import HeroSection from './sections/HeroSection';
-import AboutSection from './sections/AboutSection';
-import ProjectsSection from './sections/ProjectsSection';
-import ExperienceSection from './sections/ExperienceSection';
-import ContactSection from './sections/ContactSection';
+import HeroSection from './components/hero/HeroSection';
+import AboutSection from './components/about/AboutSection';
+import ProjectsSection from './components/projects/ProjectsSection';
+import ExperienceSection from './components/experience/ExperienceSection';
+import ContactSection from './components/contact/ContactSection';
 
 function App() {
   return (

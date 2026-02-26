@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import Card from '../components/ui/Card';
-import { useI18n } from '../i18n';
-import LocationMap from '../components/ui/LocationMap';
+import Card from '../common/Card';
+import SectionHeader from '../common/SectionHeader';
+import TechBadge from '../common/TechBadge';
+import { useI18n } from '../../i18n';
+import LocationMap from './LocationMap';
 
 const skills = [
   {
@@ -37,19 +39,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
-            {t.about.title}
-          </h2>
-          <div className="w-12 h-1 bg-neutral-900 rounded-full" />
-        </motion.div>
+        <SectionHeader title={t.about.title} />
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -140,12 +130,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1.5 bg-neutral-50 text-neutral-600 text-xs font-medium rounded-lg border border-neutral-100"
-                    >
-                      {item}
-                    </span>
+                    <TechBadge key={item} label={item} />
                   ))}
                 </div>
               </Card>

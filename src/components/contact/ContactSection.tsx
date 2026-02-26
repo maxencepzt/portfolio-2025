@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
-import Card from '../components/ui/Card';
-import { useI18n } from '../i18n';
+import Card from '../common/Card';
+import SectionHeader from '../common/SectionHeader';
+import ContactLink from './ContactLink';
+import { useI18n } from '../../i18n';
 
 const ContactSection = () => {
   const { t } = useI18n();
@@ -71,19 +73,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 mb-4">
-            {t.contact.title}
-          </h2>
-          <div className="w-12 h-1 bg-neutral-900 rounded-full" />
-        </motion.div>
+        <SectionHeader title={t.contact.title} />
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -137,44 +127,20 @@ const ContactSection = () => {
           {/* Contact Links */}
           <div className="space-y-4">
             {contacts.map((contact, index) => (
-              <motion.a
+              <motion.div
                 key={contact.label}
-                href={contact.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="block"
               >
-                <Card className="p-5 flex items-center gap-4 group cursor-pointer hover:translate-x-1">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-50 border border-neutral-100 flex items-center justify-center text-neutral-400 group-hover:text-neutral-800 group-hover:border-neutral-200 transition-all flex-shrink-0">
-                    {contact.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs text-neutral-400 font-medium uppercase tracking-wider">
-                      {contact.label}
-                    </p>
-                    <p className="text-neutral-800 font-medium text-sm truncate">
-                      {contact.value}
-                    </p>
-                  </div>
-                  <svg
-                    className="w-4 h-4 text-neutral-300 group-hover:text-neutral-500 transition-colors flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Card>
-              </motion.a>
+                <ContactLink
+                  icon={contact.icon}
+                  label={contact.label}
+                  value={contact.value}
+                  href={contact.href}
+                />
+              </motion.div>
             ))}
           </div>
         </div>

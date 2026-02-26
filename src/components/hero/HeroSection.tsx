@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { useI18n } from '../i18n';
+import { useI18n } from '../../i18n';
+import Button from '../common/Button';
+import ScrollIndicator from '../common/ScrollIndicator';
 
 const HeroSection = () => {
   const { t } = useI18n();
@@ -57,43 +59,32 @@ const HeroSection = () => {
           transition={{ delay: 0.9 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <button
+          <Button
+            variant="primary"
             onClick={() =>
               document
                 .getElementById('projects')
                 ?.scrollIntoView({ behavior: 'smooth' })
             }
-            className="px-8 py-3.5 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-all shadow-sm text-sm cursor-pointer"
+            className="cursor-pointer"
           >
             {t.hero.cta_projects}
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="secondary"
             onClick={() =>
               document
                 .getElementById('contact')
                 ?.scrollIntoView({ behavior: 'smooth' })
             }
-            className="px-8 py-3.5 bg-surface text-neutral-700 rounded-xl font-medium border border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 transition-all text-sm cursor-pointer"
+            className="cursor-pointer"
           >
             {t.hero.cta_contact}
-          </button>
+          </Button>
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="mt-20"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-5 h-8 rounded-full border-2 border-neutral-300 mx-auto flex items-start justify-center pt-1.5"
-          >
-            <div className="w-1 h-2 rounded-full bg-neutral-300" />
-          </motion.div>
-        </motion.div>
+        <ScrollIndicator />
       </div>
     </section>
   );
