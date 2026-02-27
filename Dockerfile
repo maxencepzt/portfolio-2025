@@ -2,6 +2,10 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
+# Build arguments for Vite env variables (inlined at build time)
+ARG VITE_POSTHOG_KEY
+ARG VITE_POSTHOG_HOST
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
