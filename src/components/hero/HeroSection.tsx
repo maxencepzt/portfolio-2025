@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useI18n } from '../../i18n';
 import Button from '../common/Button';
 import ScrollIndicator from '../common/ScrollIndicator';
+import posthog from 'posthog-js';
 
 const HeroSection = () => {
   const { t } = useI18n();
@@ -61,22 +62,24 @@ const HeroSection = () => {
         >
           <Button
             variant="primary"
-            onClick={() =>
+            onClick={() => {
+              posthog.capture('hero_cta_clicked', { target: 'projects' });
               document
                 .getElementById('projects')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="cursor-pointer"
           >
             {t.hero.cta_projects}
           </Button>
           <Button
             variant="secondary"
-            onClick={() =>
+            onClick={() => {
+              posthog.capture('hero_cta_clicked', { target: 'contact' });
               document
                 .getElementById('contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="cursor-pointer"
           >
             {t.hero.cta_contact}

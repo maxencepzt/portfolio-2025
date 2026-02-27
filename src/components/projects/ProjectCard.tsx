@@ -1,6 +1,7 @@
 import Card from '../common/Card';
 import TechBadge from '../common/TechBadge';
 import { useI18n } from '../../i18n';
+import posthog from 'posthog-js';
 
 interface ProjectCardProps {
   title: string;
@@ -32,6 +33,12 @@ const ProjectCard = ({
           {github && (
             <a
               href={github}
+              onClick={() =>
+                posthog.capture('project_link_clicked', {
+                  project: title,
+                  type: 'github',
+                })
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center text-neutral-400 hover:text-neutral-800 hover:border-neutral-200 transition-all"
@@ -45,6 +52,12 @@ const ProjectCard = ({
           {link && (
             <a
               href={link}
+              onClick={() =>
+                posthog.capture('project_link_clicked', {
+                  project: title,
+                  type: 'website',
+                })
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-center text-neutral-400 hover:text-neutral-800 hover:border-neutral-200 transition-all"

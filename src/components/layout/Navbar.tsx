@@ -1,12 +1,25 @@
 import { motion } from 'framer-motion';
 import { useI18n } from '../../i18n';
 import { useState, useEffect } from 'react';
+import posthog from 'posthog-js';
 
 const Navbar = () => {
   const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    // We send a pageview event for each section to track user flow
+    posthog.capture('$pageview', {
+      $current_url: `${window.location.origin}${window.location.pathname}#${activeSection}`,
+      section: activeSection,
+    });
+    // We also send a dedicated custom event for clarity in dashboards
+    posthog.capture('section_viewed', {
+      section: activeSection,
+    });
+  }, [activeSection]);
 
   const navItems = [
     { id: 'hero', label: t.nav.home },

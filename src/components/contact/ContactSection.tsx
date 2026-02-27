@@ -3,6 +3,7 @@ import Card from '../common/Card';
 import SectionHeader from '../common/SectionHeader';
 import ContactLink from './ContactLink';
 import { useI18n } from '../../i18n';
+import posthog from 'posthog-js';
 
 const ContactSection = () => {
   const { t } = useI18n();
@@ -103,6 +104,7 @@ const ContactSection = () => {
               <div className="mt-8">
                 <a
                   href="mailto:maxence.poizat@gmail.com"
+                  onClick={() => posthog.capture('contact_email_clicked')}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-all text-sm shadow-sm"
                 >
                   <svg
@@ -133,6 +135,11 @@ const ContactSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
+                onClick={() =>
+                  posthog.capture('contact_link_clicked', {
+                    platform: contact.label,
+                  })
+                }
               >
                 <ContactLink
                   icon={contact.icon}
