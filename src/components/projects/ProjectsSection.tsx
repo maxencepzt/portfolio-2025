@@ -18,7 +18,7 @@ const projectsMeta = [
   },
   {
     technologies: ['Web', 'Design UI/UX'],
-    link: 'https://ruskrecords.fr',
+    link: 'https://ruskrecords.com',
     size: 'medium',
   },
   {
