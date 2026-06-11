@@ -51,9 +51,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
+  const scrollTo = (
+    id: string,
+    source: 'desktop' | 'mobile' | 'logo' = 'desktop'
+  ) => {
     const el = document.getElementById(id);
     if (!el) return;
+
+    posthog.capture('nav_item_clicked', { section: id, source });
 
     const navbarHeight = 80;
     const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
@@ -85,7 +90,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <button
-              onClick={() => scrollTo('hero')}
+              onClick={() => scrollTo('hero', 'logo')}
               className="flex items-center gap-3"
             >
               <div className="w-9 h-9 rounded-xl bg-neutral-900 flex items-center justify-center font-bold text-white text-sm">
@@ -101,7 +106,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollTo(item.id)}
+                  onClick={() => scrollTo(item.id, 'desktop')}
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 cursor-pointer ${
                     activeSection === item.id
                       ? 'bg-neutral-900 text-white'
@@ -115,7 +120,13 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                const next = !isOpen;
+                posthog.capture('mobile_menu_toggled', {
+                  state: next ? 'open' : 'closed',
+                });
+                setIsOpen(next);
+              }}
               className="md:hidden w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center"
             >
               {isOpen ? (
@@ -161,7 +172,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollTo(item.id)}
+                  onClick={() => scrollTo(item.id, 'mobile')}
                   className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 cursor-pointer ${
                     activeSection === item.id
                       ? 'bg-neutral-900 text-white'
