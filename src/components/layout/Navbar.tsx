@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useI18n } from '../../i18n';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import posthog from 'posthog-js';
 
 const Navbar = () => {
@@ -8,14 +8,26 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
+  const prevSectionRef = useRef<string>('hero');
+  const sectionEnteredAt = useRef<number>(Date.now());
 
   useEffect(() => {
-    // We send a pageview event for each section to track user flow
+    const now = Date.now();
+
+    if (prevSectionRef.current !== activeSection) {
+      posthog.capture('section_time_spent', {
+        section: prevSectionRef.current,
+        duration_ms: now - sectionEnteredAt.current,
+      });
+    }
+
+    prevSectionRef.current = activeSection;
+    sectionEnteredAt.current = now;
+
     posthog.capture('$pageview', {
       $current_url: `${window.location.origin}${window.location.pathname}#${activeSection}`,
       section: activeSection,
     });
-    // We also send a dedicated custom event for clarity in dashboards
     posthog.capture('section_viewed', {
       section: activeSection,
     });
