@@ -55,6 +55,10 @@
     "visit_site": "Voir le site",
     "items": [
       {
+        "title": "Caudy",
+        "description": "Site vitrine de ma micro-entreprise, encore en développement. Deux activités : développement web et dépannage informatique, pour les entreprises et les particuliers de l'Essonne. Formulaire de contact en Server Action et référencement local."
+      },
+      {
         "title": "Treasurely",
         "description": "Application web progressive (PWA) pour créer et rejoindre des chasses au trésor, utilisable hors connexion : état Redux, service worker et cache applicatif."
       },
