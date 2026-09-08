@@ -21,6 +21,8 @@ const GravityToggle = ({ active, onToggle }: GravityToggleProps) => {
           : 'bg-surface text-neutral-400 border border-neutral-200 hover:border-neutral-300 hover:text-neutral-600 shadow-sm'
       }`}
       title={`${t.gravity.label_prefix} ${active ? t.gravity.reversed : t.gravity.normal} (G)`}
+      aria-label={`${t.gravity.label_prefix} ${active ? t.gravity.reversed : t.gravity.normal}`}
+      aria-pressed={active}
     >
       <motion.svg
         animate={{ rotate: active ? 180 : 0 }}
