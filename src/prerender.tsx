@@ -6,7 +6,7 @@ import { I18nProvider } from './i18n';
 export async function prerender() {
   const html = renderToString(
     <StrictMode>
-      <I18nProvider>
+      <I18nProvider locale="fr">
         <App />
       </I18nProvider>
     </StrictMode>

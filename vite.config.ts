@@ -20,6 +20,28 @@ export default defineConfig({
       'react-dom/server': `${__dirname}node_modules/react-dom/cjs/react-dom-server-legacy.browser.production.js`,
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // react-dom/server is reachable only from the prerender entry, but
+        // Rollup folds it into the chunk that entry shares with the app, so
+        // every visitor downloads server-rendering code they never execute.
+        // Forcing it into its own chunk keeps it out of the client's graph.
+        manualChunks(id: string) {
+          if (id.includes('react-dom-server-legacy')) {
+            return 'react-dom-server';
+          }
+          if (
+            id.includes('node_modules/react/') ||
+            id.includes('node_modules/react-dom/') ||
+            id.includes('node_modules/scheduler/')
+          ) {
+            return 'react';
+          }
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),

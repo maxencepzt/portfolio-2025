@@ -31,7 +31,8 @@ const projectsMeta = [
   },
   {
     technologies: ['Web', 'Design UI/UX'],
-    link: 'https://ruskrecords.com',
+    // No link: ruskrecords.com stopped resolving (NXDOMAIN). A card with no
+    // icon beats an icon that leads nowhere. Restore the link if it comes back.
     size: 'medium',
   },
   {
