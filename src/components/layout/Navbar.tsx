@@ -24,10 +24,6 @@ const Navbar = () => {
     prevSectionRef.current = activeSection;
     sectionEnteredAt.current = now;
 
-    posthog.capture('$pageview', {
-      $current_url: `${window.location.origin}${window.location.pathname}#${activeSection}`,
-      section: activeSection,
-    });
     posthog.capture('section_viewed', {
       section: activeSection,
     });

@@ -24,7 +24,14 @@ if (posthogKey) {
     ui_host: 'https://eu.posthog.com',
     person_profiles: 'identified_only',
     autocapture: true,
-    capture_pageview: false, // Disabling default page view to handle it per-section
+    // One page view per load, captured by posthog-js itself. The navbar used
+    // to emit a $pageview on every section change, which multiplied the count
+    // by the number of sections a visitor scrolled through and left bounce
+    // rate and session duration meaningless. Sections are tracked by
+    // section_viewed, which carries the section as a property.
+    // Safe to leave on: the navbar scrolls with window.scrollTo and never
+    // touches location.hash, so there is no navigation to capture twice.
+    capture_pageview: true,
   });
 }
 
