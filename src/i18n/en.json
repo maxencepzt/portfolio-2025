@@ -8,15 +8,15 @@
   },
   "hero": {
     "subtitle": "Full-Stack Developer · AI Enthusiast",
-    "bio": "Computer Science student, I combine web development and a passion for artificial intelligence. Self-driven and curious, I build projects that push my technical limits.",
+    "bio": "Third-year Computer Science student. I build with React and Symfony, run my own servers and work with local AI models. Looking for a work-study position in software development and AI from 2026.",
     "cta_projects": "View my projects",
     "cta_contact": "Get in touch"
   },
   "about": {
     "title": "About",
     "who_title": "Who am I",
-    "who_subtitle": "Developer & Creator",
-    "bio_p1": "Currently in my third year of a Computer Science degree at IUT de Reims, I have built a strong technical foundation in web development. But beyond coursework, I am a passionate maker who needs to",
+    "who_subtitle": "Full-stack developer & self-taught",
+    "bio_p1": "Currently in my third year of a Computer Science degree at IUT de Reims. The programme gave me the web development basics; the rest comes from a constant need to",
     "bio_do": "\"build\"",
     "bio_p1_end": ". Self-taught, I deploy my own servers, explore local AI models with Ollama, and closely follow financial markets.",
     "bio_p2_start": "I am currently looking for a",
@@ -41,7 +41,7 @@
       {
         "emoji": "🎬",
         "label": "Video",
-        "desc": "Cinematic video creation, movie enthusiast"
+        "desc": "Shooting and editing video, cinema"
       },
       {
         "emoji": "📈",
@@ -56,7 +56,7 @@
     "items": [
       {
         "title": "Treasurely",
-        "description": "Progressive Web App (PWA) to create and join treasure hunts. Full interface with Redux state management, offline service worker and smart cache."
+        "description": "Progressive Web App (PWA) to create and join treasure hunts, usable offline: Redux state, a service worker and an application cache."
       },
       {
         "title": "Rusk Records",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Portfolio",
-        "description": "This interactive portfolio featuring a particle system, bento layout and smooth animations."
+        "description": "The site you are viewing. Bento layout, animated canvas background and an interactive particle system."
       },
       {
         "title": "SAÉ Maze Solver",
@@ -81,7 +81,7 @@
     "pro_title": "Work Experience",
     "edu_title": "Education",
     "autodidact_title": "Self-taught",
-    "autodidact_desc": "All these experiences were completely self-taught.",
+    "autodidact_desc": "None of these projects were part of the curriculum.",
     "autodidact_projects": [
       {
         "title": "OpenClaw",
@@ -112,7 +112,7 @@
         "desc": "Creation of a performance tracking interface with Grafana."
       }
     ],
-    "autodidact_joke": "And some projects abandoned along the way... 😅",
+    "autodidact_joke": "",
     "jobs": [
       {
         "period": "Jan. 2026 — Apr. 2026",
@@ -146,11 +146,11 @@
         "period": "2023 — 2026",
         "title": "BUT Informatique",
         "school": "IUT de Reims",
-        "desc": "Comprehensive training in development, databases, networking and project management."
+        "desc": "Development, databases, networking and project management."
       },
       {
         "period": "2023",
-        "title": "Baccalauréat — General",
+        "title": "Baccalauréat, general track",
         "school": "With Honours",
         "desc": "Majors: Maths, IT, Expert Maths"
       }
@@ -161,11 +161,11 @@
     "cta_title": "Let's work together",
     "cta_desc_start": "I am looking for a",
     "cta_desc_strong": "work-study position in software development and AI in the Paris region",
-    "cta_desc_end": "for the 2026-2029 period. Open to any collaboration or innovative project opportunity.",
+    "cta_desc_end": "for the 2026-2029 period. I am also available for one-off projects.",
     "send_email": "Send me an email",
     "website": "Website",
     "hint": "Tip: Press",
-    "hint_end": "to play with particle gravity"
+    "hint_end": "to invert particle gravity"
   },
   "footer": {
     "rights": "All rights reserved.",
