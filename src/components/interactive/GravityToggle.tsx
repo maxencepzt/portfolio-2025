@@ -21,6 +21,8 @@ const GravityToggle = ({ active, onToggle }: GravityToggleProps) => {
           : 'bg-surface text-neutral-400 border border-neutral-200 hover:border-neutral-300 hover:text-neutral-600 shadow-sm'
       }`}
       title={`${t.gravity.label_prefix} ${active ? t.gravity.reversed : t.gravity.normal} (G)`}
+      aria-label={`${t.gravity.label_prefix} ${active ? t.gravity.reversed : t.gravity.normal}`}
+      aria-pressed={active}
     >
       <motion.svg
         animate={{ rotate: active ? 180 : 0 }}
@@ -28,14 +30,18 @@ const GravityToggle = ({ active, onToggle }: GravityToggleProps) => {
         className="w-5 h-5"
         fill="none"
         stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         viewBox="0 0 24 24"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
+        {/* Two opposed arrows, the standard "flip the vertical direction"
+            glyph. A single down arrow read as a scroll control, and putting a
+            baseline under it only made it read as a download. */}
+        <path d="M7 4v16" />
+        <path d="m3 8 4-4 4 4" />
+        <path d="M17 20V4" />
+        <path d="m21 16-4 4-4-4" />
       </motion.svg>
 
       {/* Ripple effect when active */}

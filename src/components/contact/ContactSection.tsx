@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../common/Card';
 import SectionHeader from '../common/SectionHeader';
@@ -7,6 +8,14 @@ import posthog from 'posthog-js';
 
 const ContactSection = () => {
   const { t } = useI18n();
+
+  // The G shortcut means nothing without a keyboard, so point touch visitors
+  // at the floating button instead. Read in an effect, not during render:
+  // matchMedia does not exist when the page is prerendered at build time.
+  const [isTouch, setIsTouch] = useState(false);
+  useEffect(() => {
+    setIsTouch(window.matchMedia('(pointer: coarse)').matches);
+  }, []);
 
   const contacts = [
     {
@@ -161,11 +170,18 @@ const ContactSection = () => {
           className="text-center mt-16"
         >
           <p className="text-neutral-300 text-sm">
-            💡 {t.contact.hint}{' '}
-            <kbd className="px-2 py-1 bg-neutral-100 rounded text-neutral-500 text-xs font-mono">
-              G
-            </kbd>{' '}
-            {t.contact.hint_end}
+            💡{' '}
+            {isTouch ? (
+              t.contact.hint_touch
+            ) : (
+              <>
+                {t.contact.hint}{' '}
+                <kbd className="px-2 py-1 bg-neutral-100 rounded text-neutral-500 text-xs font-mono">
+                  G
+                </kbd>{' '}
+                {t.contact.hint_end}
+              </>
+            )}
           </p>
         </motion.div>
       </div>

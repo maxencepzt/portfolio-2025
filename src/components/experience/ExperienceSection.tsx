@@ -78,7 +78,7 @@ const ExperienceSection = () => {
                 <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">
                   {t.experience.autodidact_title}
                 </h3>
-                <span className="text-neutral-300 text-xs">—</span>
+                <span className="text-neutral-300 text-xs">·</span>
                 <p className="text-neutral-400 text-xs">
                   {t.experience.autodidact_desc}
                 </p>

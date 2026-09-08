@@ -8,15 +8,15 @@
   },
   "hero": {
     "subtitle": "Développeur Full-Stack · Passionné d'IA",
-    "bio": "Étudiant en BUT Informatique, je combine développement web et passion pour l'intelligence artificielle. Autonome et curieux, je crée des projets qui repoussent mes limites techniques.",
+    "bio": "Étudiant en troisième année de BUT Informatique. Je développe en React et en Symfony, j'administre mes propres serveurs et je travaille les modèles d'IA en local. Objectif : une alternance en développement logiciel et IA à partir de 2026.",
     "cta_projects": "Voir mes projets",
     "cta_contact": "Me contacter"
   },
   "about": {
     "title": "À propos",
     "who_title": "Qui suis-je",
-    "who_subtitle": "Développeur & Créateur",
-    "bio_p1": "Actuellement en troisième année de BUT Informatique à l'IUT de Reims, j'ai acquis un bagage technique solide en développement web. Mais au-delà des cours, je suis un passionné qui a besoin de",
+    "who_subtitle": "Développeur full-stack & autodidacte",
+    "bio_p1": "Actuellement en troisième année de BUT Informatique à l'IUT de Reims. La formation m'a donné les bases du développement web ; le reste vient d'un besoin constant de",
     "bio_do": "\"faire\"",
     "bio_p1_end": ". En autodidacte, je déploie mes propres serveurs, j'explore les modèles d'IA locaux avec Ollama et je m'intéresse de près aux marchés financiers.",
     "bio_p2_start": "Je cherche actuellement une",
@@ -41,7 +41,7 @@
       {
         "emoji": "🎬",
         "label": "Vidéo",
-        "desc": "Création vidéos cinématographiques, passionné de films"
+        "desc": "Réalisation et montage vidéo, cinéma"
       },
       {
         "emoji": "📈",
@@ -56,7 +56,7 @@
     "items": [
       {
         "title": "Treasurely",
-        "description": "Application web Progressive (PWA) pour créer et participer à des chasses au trésor. Interface complète avec gestion d'état Redux, service worker offline et cache intelligent."
+        "description": "Application web progressive (PWA) pour créer et rejoindre des chasses au trésor, utilisable hors connexion : état Redux, service worker et cache applicatif."
       },
       {
         "title": "Rusk Records",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Portfolio",
-        "description": "Ce portfolio interactif avec système de particules, bento layout et animations fluides."
+        "description": "Le site que vous consultez. Layout bento, fond animé en canvas et système de particules interactif."
       },
       {
         "title": "SAÉ Labyrinthe",
@@ -81,7 +81,7 @@
     "pro_title": "Expériences professionnelles",
     "edu_title": "Formation",
     "autodidact_title": "Autodidacte",
-    "autodidact_desc": "Toutes ces expériences ont été réalisées en autodidactes.",
+    "autodidact_desc": "Aucun de ces projets ne faisait partie du cursus.",
     "autodidact_projects": [
       {
         "title": "OpenClaw",
@@ -112,10 +112,10 @@
         "desc": "Création d'une interface de suivi de performances avec Grafana."
       }
     ],
-    "autodidact_joke": "Et quelques projets abandonnés en cours de route... 😅",
+    "autodidact_joke": "",
     "jobs": [
       {
-        "period": "Jan. 2026 — Avr. 2026",
+        "period": "Jan. 2026 - Avr. 2026",
         "duration": "4 mois",
         "title": "Développeur Back-end",
         "company": "Monstock",
@@ -128,7 +128,7 @@
         "techs": ["Symfony", "PHP", "API REST"]
       },
       {
-        "period": "Avr. 2025 — Juin 2025",
+        "period": "Avr. 2025 - Juin 2025",
         "duration": "3 mois",
         "title": "Développeur Web",
         "company": "DSI Univ. Paris-Saclay",
@@ -143,14 +143,14 @@
     ],
     "education": [
       {
-        "period": "2023 — 2026",
+        "period": "2023 - 2026",
         "title": "BUT Informatique",
         "school": "IUT de Reims",
-        "desc": "Formation complète en développement, bases de données, réseau et gestion de projet."
+        "desc": "Développement, bases de données, réseau et gestion de projet."
       },
       {
         "period": "2023",
-        "title": "Baccalauréat —  Général",
+        "title": "Baccalauréat général",
         "school": "Mention Bien",
         "desc": "Spécialités : Mathématiques, Informatique. Option : Mathématiques Expertes"
       }
@@ -161,11 +161,12 @@
     "cta_title": "Travaillons ensemble",
     "cta_desc_start": "Je suis à la recherche d'une",
     "cta_desc_strong": "alternance en développement logiciel et IA en région parisienne",
-    "cta_desc_end": "pour la période 2026-2029. Ouvert à toute opportunité de collaboration ou de projet innovant.",
+    "cta_desc_end": "pour la période 2026-2029. Je suis également disponible pour des projets ponctuels.",
     "send_email": "M'envoyer un email",
     "website": "Site web",
-    "hint": "Astuce : Appuie sur",
-    "hint_end": "pour jouer avec la gravité des particules"
+    "hint": "Astuce : appuyez sur",
+    "hint_touch": "Astuce : le bouton en bas à droite inverse la gravité des particules.",
+    "hint_end": "pour inverser la gravité des particules"
   },
   "footer": {
     "rights": "Tous droits réservés.",
