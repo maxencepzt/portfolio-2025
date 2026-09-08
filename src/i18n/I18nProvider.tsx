@@ -12,8 +12,17 @@ function detectLocale(): Locale {
   return lang.startsWith('fr') ? 'fr' : 'en';
 }
 
-export const I18nProvider = ({ children }: { children: ReactNode }) => {
-  const [locale, setLocale] = useState<Locale>(detectLocale);
+export const I18nProvider = ({
+  children,
+  locale: initialLocale,
+}: {
+  children: ReactNode;
+  // Only the build-time prerender passes this. navigator.language on the build
+  // machine is en-US, so without it dist/index.html would ship English text
+  // under <html lang="fr">, and that is the copy search engines index.
+  locale?: Locale;
+}) => {
+  const [locale, setLocale] = useState<Locale>(initialLocale ?? detectLocale);
 
   useEffect(() => {
     document.documentElement.lang = locale;
