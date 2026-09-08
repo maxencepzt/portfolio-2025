@@ -55,6 +55,10 @@
     "visit_site": "Visit site",
     "items": [
       {
+        "title": "Caudy",
+        "description": "Showcase site for my own micro-business, still in development. Two services, web development and IT support, for companies and individuals across the Essonne area. Contact form built as a Server Action, plus local SEO."
+      },
+      {
         "title": "Treasurely",
         "description": "Progressive Web App (PWA) to create and join treasure hunts, usable offline: Redux state, a service worker and an application cache."
       },

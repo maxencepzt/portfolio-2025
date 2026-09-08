@@ -6,6 +6,18 @@ import { useI18n } from '../../i18n';
 const projectsMeta = [
   {
     technologies: [
+      'Next.js 16',
+      'TypeScript',
+      'Tailwind CSS',
+      'Server Actions',
+      'Resend',
+    ],
+    link: 'https://caudy.fr',
+    github: 'https://github.com/maxencepzt/caudy-front',
+    size: 'large',
+  },
+  {
+    technologies: [
       'React 19',
       'TypeScript',
       'Redux Toolkit',
@@ -13,8 +25,9 @@ const projectsMeta = [
       'PWA',
       'Vite',
     ],
+    link: 'https://treasurely.maxencepzt.fr',
     github: 'https://github.com/maxencepzt/treasurely-front',
-    size: 'large',
+    size: 'medium',
   },
   {
     technologies: ['Web', 'Design UI/UX'],
