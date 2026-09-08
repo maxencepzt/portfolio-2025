@@ -1,9 +1,11 @@
+import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../common/Card';
 import SectionHeader from '../common/SectionHeader';
 import TechBadge from '../common/TechBadge';
 import { useI18n } from '../../i18n';
-import LocationMap from './LocationMap';
+
+const LocationMap = lazy(() => import('./LocationMap'));
 
 const skills = [
   {
@@ -90,7 +92,11 @@ const AboutSection = () => {
             <Card className="h-full overflow-hidden relative min-h-[320px]">
               {/* Map Background */}
               <div className="absolute inset-0">
-                <LocationMap />
+                <Suspense
+                  fallback={<div className="w-full h-full bg-neutral-100" />}
+                >
+                  <LocationMap />
+                </Suspense>
               </div>
 
               {/* Glass Overlay */}
