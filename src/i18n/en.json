@@ -8,7 +8,7 @@
   },
   "hero": {
     "subtitle": "Full-Stack Developer · AI Enthusiast",
-    "bio": "Third-year Computer Science student. I build with React and Symfony, run my own servers and work with local AI models. Looking for a work-study position in software development and AI from 2026.",
+    "bio": "Computer Science graduate (BUT Informatique). I build with React and Symfony, run my own servers and work with local AI models. Looking for a full-stack work-study position for my engineering degree at Efrei.",
     "cta_projects": "View my projects",
     "cta_contact": "Get in touch"
   },
@@ -16,12 +16,12 @@
     "title": "About",
     "who_title": "Who am I",
     "who_subtitle": "Full-stack developer & self-taught",
-    "bio_p1": "Currently in my third year of a Computer Science degree at IUT de Reims. The programme gave me the web development basics; the rest comes from a constant need to",
+    "bio_p1": "Computer Science graduate (BUT Informatique). The programme gave me the web development basics; the rest comes from a constant need to",
     "bio_do": "\"build\"",
     "bio_p1_end": ". Self-taught, I deploy my own servers, explore local AI models with Ollama, and closely follow financial markets.",
     "bio_p2_start": "I am currently looking for a",
-    "bio_p2_strong": "work-study position in software development and AI in the Paris region",
-    "bio_p2_end": "to join an engineering school and transition from technician to engineer.",
+    "bio_p2_strong": "full-stack work-study position in the Paris region",
+    "bio_p2_end": "for my engineering degree at Efrei, majoring in Software and Information Systems.",
     "based_in": "Based in",
     "location": "Île-de-France",
     "location_detail": "Paris Area (91) · Driving License",
@@ -147,6 +147,12 @@
     ],
     "education": [
       {
+        "period": "2026 - 2029",
+        "title": "Computer Science Engineering degree",
+        "school": "Efrei",
+        "desc": "Software and Information Systems major, work-study programme."
+      },
+      {
         "period": "2023 - 2026",
         "title": "BUT Informatique",
         "school": "IUT de Reims",
@@ -164,8 +170,8 @@
     "title": "Contact",
     "cta_title": "Let's work together",
     "cta_desc_start": "I am looking for a",
-    "cta_desc_strong": "work-study position in software development and AI in the Paris region",
-    "cta_desc_end": "for the 2026-2029 period. I am also available for one-off projects.",
+    "cta_desc_strong": "full-stack work-study position in the Paris region",
+    "cta_desc_end": "for the 2026-2029 period, as part of my engineering degree at Efrei (Software and Information Systems major). I am also available for one-off projects.",
     "send_email": "Send me an email",
     "website": "Website",
     "hint": "Tip: Press",

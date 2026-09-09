@@ -8,7 +8,7 @@
   },
   "hero": {
     "subtitle": "Développeur Full-Stack · Passionné d'IA",
-    "bio": "Étudiant en troisième année de BUT Informatique. Je développe en React et en Symfony, j'administre mes propres serveurs et je travaille les modèles d'IA en local. Objectif : une alternance en développement logiciel et IA à partir de 2026.",
+    "bio": "Diplômé d'un BUT Informatique. Je développe en React et en Symfony, j'administre mes propres serveurs et je travaille les modèles d'IA en local. Objectif : une alternance en développement full-stack pour mon cycle ingénieur à l'Efrei.",
     "cta_projects": "Voir mes projets",
     "cta_contact": "Me contacter"
   },
@@ -16,12 +16,12 @@
     "title": "À propos",
     "who_title": "Qui suis-je",
     "who_subtitle": "Développeur full-stack & autodidacte",
-    "bio_p1": "Actuellement en troisième année de BUT Informatique à l'IUT de Reims. La formation m'a donné les bases du développement web ; le reste vient d'un besoin constant de",
+    "bio_p1": "Diplômé d'un BUT Informatique. La formation m'a donné les bases du développement web ; le reste vient d'un besoin constant de",
     "bio_do": "\"faire\"",
     "bio_p1_end": ". En autodidacte, je déploie mes propres serveurs, j'explore les modèles d'IA locaux avec Ollama et je m'intéresse de près aux marchés financiers.",
     "bio_p2_start": "Je cherche actuellement une",
-    "bio_p2_strong": "alternance en développement logiciel et IA en région parisienne",
-    "bio_p2_end": "pour intégrer une école d'ingénieurs et passer du statut de technicien à celui d'ingénieur.",
+    "bio_p2_strong": "alternance en développement full-stack en région parisienne",
+    "bio_p2_end": "pour mon cycle ingénieur à l'Efrei, en majeure Logiciels et Systèmes d'information.",
     "based_in": "Basé en",
     "location": "Île-de-France",
     "location_detail": "Région Parisienne (91) · Permis B",
@@ -147,6 +147,12 @@
     ],
     "education": [
       {
+        "period": "2026 - 2029",
+        "title": "Cycle ingénieur Informatique",
+        "school": "Efrei",
+        "desc": "Majeure Logiciels et Systèmes d'information, en alternance."
+      },
+      {
         "period": "2023 - 2026",
         "title": "BUT Informatique",
         "school": "IUT de Reims",
@@ -164,8 +170,8 @@
     "title": "Contact",
     "cta_title": "Travaillons ensemble",
     "cta_desc_start": "Je suis à la recherche d'une",
-    "cta_desc_strong": "alternance en développement logiciel et IA en région parisienne",
-    "cta_desc_end": "pour la période 2026-2029. Je suis également disponible pour des projets ponctuels.",
+    "cta_desc_strong": "alternance en développement full-stack en région parisienne",
+    "cta_desc_end": "pour la période 2026-2029, dans le cadre de mon cycle ingénieur à l'Efrei (majeure Logiciels et Systèmes d'information). Je suis également disponible pour des projets ponctuels.",
     "send_email": "M'envoyer un email",
     "website": "Site web",
     "hint": "Astuce : appuyez sur",
