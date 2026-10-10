@@ -8,13 +8,27 @@ const projectsMeta = [
     technologies: [
       'Next.js 16',
       'TypeScript',
+      'React Flow',
+      'Zustand',
+      'Tailwind CSS',
+      'Vitest',
+    ],
+    link: 'https://cardina.maxencepzt.fr',
+    // No github: maxencepzt/cardina is private, so the icon would 404 for
+    // every visitor. Add the link once the repository is public.
+    size: 'large',
+  },
+  {
+    technologies: [
+      'Next.js 16',
+      'TypeScript',
       'Tailwind CSS',
       'Server Actions',
       'Resend',
     ],
     link: 'https://caudy.fr',
     github: 'https://github.com/maxencepzt/caudy-front',
-    size: 'large',
+    size: 'medium',
   },
   {
     technologies: [
